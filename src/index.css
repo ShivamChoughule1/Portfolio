@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+html, body {
+  @apply bg-[#f9fafb] text-black dark:bg-[#111827] dark:text-white;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevent body scroll */
+}
+
+/* Custom scrollbar styles */
+.custom-scroll::-webkit-scrollbar {
+  width: 4px; /* Thin but not unusably small */
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: #60a5fa;
+  border-radius: 9999px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Firefox support */
+.custom-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #60a5fa transparent;
+  scroll-behavior: smooth;
+}
+
+
+
+/* For Chrome, Edge, and Safari */
+.thin-blue-scrollbar::-webkit-scrollbar {
+  width: 4px; /* Thin */
+}
+
+.thin-blue-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #60a5fa;
+  border-radius: 4px;
+}
+
+.thin-blue-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* For Firefox */
+.thin-blue-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #60a5fa transparent;
+  scroll-behavior: smooth;
+}
+
+
